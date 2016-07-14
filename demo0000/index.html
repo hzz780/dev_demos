@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>loading效果</title>
+    </head>
+    <style>
+        .follow-loading {
+            background: url(follow_loading.png) no-repeat;
+            background-position: 50% 50%;
+            background-size: 100%;
+            /* -webkit-mask-size: rem(30px) rem(30px);*/
+            -webkit-animation-name: followloading;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            /* 居中 */
+            position: absolute;
+            margin: 0 auto 0 auto;
+            left: 0;
+            top: 6px;
+            bottom: 0;
+            right: 0;
+            /* 居中end */
+            width: 250px;
+            height: 250px;
+            border-radius: 250px;
+        }
+        .follow-loading-small{
+            top: 7px;
+        }
+        @keyframes followloading {
+          from {-webkit-transform:rotate(0deg);}
+          to {-webkit-transform:rotate(360deg);}
+        }
+        @-webkit-keyframes followloading {
+          from {-webkit-transform:rotate(0deg);}
+          to {-webkit-transform:rotate(360deg);}
+        }
+    </style>
+    <body>
+        <div class="follow-loading"></div>
+    </body>
+</html>
